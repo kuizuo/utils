@@ -1,6 +1,6 @@
 {
   "name": "@kuizuo/utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packageManager": "pnpm@7.11.0",
   "description": "Opinionated collection of common JavaScript / TypeScript utils by @kuizuo",
   "author": {
