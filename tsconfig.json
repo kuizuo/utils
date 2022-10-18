@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2018",
+    "target": "ES2020",
     "module": "esnext",
     "lib": ["esnext", "dom"],
     "moduleResolution": "node",
@@ -9,5 +9,6 @@
     "strictNullChecks": true,
     "resolveJsonModule": true,
     "skipLibCheck": true
-  }
+  },
+  "include": ["src/**/*.ts"],
 }
