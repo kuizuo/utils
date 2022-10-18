@@ -1,0 +1,55 @@
+{
+  "name": "@kuizuo/utils",
+  "version": "0.1.0",
+  "packageManager": "pnpm@7.11.0",
+  "description": "Opinionated collection of common JavaScript / TypeScript utils by @kuizuo",
+  "author": {
+    "url": "https://kuizuo.cn",
+    "email": "hi@kuizuo.cn",
+    "name": "Kuizuo"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/kuizuo/utils",
+    "type": "git"
+  },
+  "homepage": "https://github.com/kuizuo/utils#readme",
+  "bugs": {
+    "url": "https://github.com/kuizuo/utils/issues"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "index.d.ts",
+  "type": "module",
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "nr build --watch",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run build",
+    "release": "bumpp --commit --push --tag && npm publish",
+    "start": "esno src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@kuizuo/eslint-config": "^1.0.0",
+    "@rollup/plugin-alias": "^4.0.0",
+    "@rollup/plugin-commonjs": "^23.0.0",
+    "@rollup/plugin-json": "^5.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@types/node": "^18.11.0",
+    "eslint": "^8.25.0",
+    "rollup": "^3.2.2",
+    "rollup-plugin-dts": "^5.0.0",
+    "rollup-plugin-esbuild": "^4.10.1",
+    "typescript": "^4.8.4",
+    "vitest": "^0.24.3"
+  }
+}
