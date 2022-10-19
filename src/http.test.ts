@@ -1,14 +1,14 @@
 import { expect, it } from 'vitest'
-import { obj2query, query2obj } from './http'
+import { qsParse, qsStringify } from './http'
 
-it('query2obj', () => {
-  expect(query2obj('a=1&b=2')).toEqual({ a: '1', b: '2' })
+it('qsParse', () => {
+  expect(qsParse('a=1&b=2')).toEqual({ a: '1', b: '2' })
 
-  expect(query2obj('a=1; b=2', '; ')).toEqual({ a: '1', b: '2' })
+  expect(qsParse('a=1; b=2', '; ')).toEqual({ a: '1', b: '2' })
 })
 
-it('obj2query', () => {
-  expect(obj2query({ a: '1', b: '2' })).toEqual('a=1&b=2')
-  
-  expect(obj2query({ a: '1', b: '2' }, '; ')).toEqual('a=1; b=2')
+it('qsStringify', () => {
+  expect(qsStringify({ a: '1', b: '2' })).toEqual('a=1&b=2')
+
+  expect(qsStringify({ a: '1', b: '2' }, '; ')).toEqual('a=1; b=2')
 })

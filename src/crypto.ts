@@ -8,7 +8,7 @@ export const sha512 = (message: string) => CryptoJS.SHA512(message).toString()
 
 /**
  * RSA encryption public key
- * @example: publicKey 
+ * @example: publicKey
  * -----BEGIN PUBLIC KEY-----
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCZiDbSHva6UzSXIibG010ThViS
 3b7FoeCKHF/8E7NP+wdBEoAuvCNwVolfEg1AmUtpp4X1Isae89IcW5i8GUWjSzmJ

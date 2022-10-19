@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest'
-import { base64encode, base64decode } from './encode'
+import { base64decode, base64encode } from './encode'
 
 it('base64encode', () => {
   expect(base64encode('test')).toEqual('dGVzdA==')

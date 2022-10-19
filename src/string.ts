@@ -1,13 +1,16 @@
-export function getMidStr(str: string, start: string, end: string, index: number = 0): string {
-  if (typeof str !== 'string' || !str) return ''
+export function getMidStr(str: string, start: string, end: string, index = 0): string {
+  if (typeof str !== 'string' || !str)
+    return ''
 
   let left = str.indexOf(start, index)
-  if (left === -1) return ''
+  if (left === -1)
+    return ''
 
   left += start.length
 
-  let right = str.indexOf(end, left)
-  if (right === -1) return ''
+  const right = str.indexOf(end, left)
+  if (right === -1)
+    return ''
 
   return str.substr(left, right - left)
 }
@@ -39,6 +42,6 @@ export function rangeNum(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-export function delHtmlTag(str:string) {
-	return str.replaceAll(/<[^>]+>/g, '')
+export function delHtmlTag(str: string) {
+  return str.replaceAll(/<[^>]+>/g, '')
 }

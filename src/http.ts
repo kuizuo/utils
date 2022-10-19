@@ -1,18 +1,12 @@
-const SEPARATOR = '&'
+import qs from 'querystring'
 
-export const query2obj = (text: string, separator: string = SEPARATOR): Record<string, string> => {
-  return text.split(separator).reduce((a: any, val) => ((a[val.slice(0, val.indexOf('=')).trim()] = val.slice(val.indexOf('=') + 1).trim()), a), {})
-}
+const SEP = '&'
+const EQ = '='
 
-export const obj2query = (obj: Record<string, string>, separator: string = SEPARATOR): string => {
-  const query: string[] = Object.keys(obj).map((key) => `${key}=${obj[key]}`)
-  return query.join(separator)
-}
+export const qsParse = (text: string, sep: string = SEP, eq: string = EQ) => qs.parse(text, sep, eq)
 
-export function urlencode(str: string): string {
-  return encodeURIComponent(str)
-}
+export const qsStringify = (obj: qs.ParsedUrlQueryInput, sep: string = SEP, eq: string = EQ): string => qs.stringify(obj, sep, eq)
 
-export function urldecode(str: string): string {
-  return decodeURIComponent(str)
-}
+export const urlencode = (str: string): string => encodeURIComponent(str)
+
+export const urldecode = (str: string): string => decodeURIComponent(str)

@@ -1,5 +1,6 @@
 {
   "name": "@kuizuo/utils",
+  "type": "module",
   "version": "0.1.1",
   "packageManager": "pnpm@7.11.0",
   "description": "Opinionated collection of common JavaScript / TypeScript utils by @kuizuo",
@@ -8,22 +9,21 @@
     "email": "hi@kuizuo.cn",
     "name": "Kuizuo"
   },
-  "keywords": [
-    "utils"
-  ],
   "license": "MIT",
+  "homepage": "https://github.com/kuizuo/utils#readme",
   "repository": {
     "url": "https://github.com/kuizuo/utils",
     "type": "git"
   },
-  "homepage": "https://github.com/kuizuo/utils#readme",
   "bugs": {
     "url": "https://github.com/kuizuo/utils/issues"
   },
+  "keywords": [
+    "utils"
+  ],
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "index.d.ts",
-  "type": "module",
   "files": [
     "dist",
     "*.d.ts"
@@ -38,6 +38,12 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest"
   },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.5",
+    "js-base64": "^3.7.2",
+    "node-rsa": "^1.1.1"
+  },
   "devDependencies": {
     "@kuizuo/eslint-config-ts": "^1.0.0",
     "@rollup/plugin-alias": "^4.0.0",
@@ -47,19 +53,12 @@
     "@types/crypto-js": "^4.1.1",
     "@types/node": "^18.11.0",
     "@types/node-rsa": "^1.1.1",
-    "crypto-js": "^4.1.1",
-    "dayjs": "^1.11.5",
+    "bumpp": "^8.2.1",
     "eslint": "^8.25.0",
-    "js-base64": "^3.7.2",
-    "jsencrypt": "^3.2.1",
-    "node-rsa": "^1.1.1",
     "rollup": "^3.2.2",
     "rollup-plugin-dts": "^5.0.0",
     "rollup-plugin-esbuild": "^4.10.1",
     "typescript": "^4.8.4",
     "vitest": "^0.24.3"
-  },
-  "dependencies": {
-    "bumpp": "^8.2.1"
   }
 }
