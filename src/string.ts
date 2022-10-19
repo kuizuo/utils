@@ -43,5 +43,5 @@ export function rangeNum(min: number, max: number) {
 }
 
 export function delHtmlTag(str: string) {
-  return str.replaceAll(/<[^>]+>/g, '')
+  return str.replace(/<[^>]+>/g, '')
 }
