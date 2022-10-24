@@ -15,3 +15,5 @@ export const isElement = (val: unknown): val is Element => isObject(val) && !!va
 export const isMap = (val: unknown): val is Map<any, any> => is(val, 'Map')
 export const isUrl = (path: string): boolean =>
   /(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+(?::\d+)?|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/.test(path)
+
+export const isPhone = (val: string): boolean => /^(?:(?:\+|00)86)?1[3-9]\d{9}$/.test(val)
