@@ -1,11 +1,8 @@
 import qs from 'querystring'
 
-const SEP = '&'
-const EQ = '='
+export const qsParse = (...rest: Parameters<typeof qs.parse>) => qs.parse(...rest)
 
-export const qsParse = (text: string, sep: string = SEP, eq: string = EQ) => qs.parse(text, sep, eq)
-
-export const qsStringify = (obj: qs.ParsedUrlQueryInput, sep: string = SEP, eq: string = EQ): string => qs.stringify(obj, sep, eq)
+export const qsStringify = (...rest: Parameters<typeof qs.stringify>): string => qs.stringify(...rest)
 
 export const urlencode = (str: string): string => encodeURIComponent(str)
 
